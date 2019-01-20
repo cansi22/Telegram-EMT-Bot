@@ -19,6 +19,7 @@ TOKEN = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"		#Telegram Bot Token
 idClient_EMT = "WEB.SERV.xxxxxxxxxxxxxxxxxxxxxxx"			#EMT id Client
 passKey_EMT = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"		#EMT pass key
 message_delete = ''
+admin_id "00000"                                            #UserID del usuario que tenga acceso al /ip
 
 
 
@@ -226,7 +227,7 @@ def help(bot, update):
    
 #Devuelve la ip publica
 def getIP (bot, update):
-    if update.message.chat.id == 497827:
+    if update.message.chat.id == admin_id:
         url = "http://icanhazip.com/"
         r = request.urlopen(url)
         bytecode = r.read()
